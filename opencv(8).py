@@ -30,7 +30,7 @@ while(1):
         img[:] = 0
     else:
         img[:] = [b, g, r]
-
+    
 
     #img[:] = [b, g, r]
 
