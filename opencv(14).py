@@ -1,0 +1,1 @@
+#Smoothing or Blurring the image
