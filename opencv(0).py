@@ -1,6 +1,7 @@
+#saving videos
 import cv2
 cap = cv2.VideoCapture(0)
-fourcc = cv2.VideoWriter_fourcc('X', 'v', 'I', 'D')#WVID is a fourcc code
+fourcc = cv2.VideoWriter_fourcc('X', 'v', 'I', 'D')#XVID is a fourcc code
 out = cv2.VideoWriter("output.avi", fourcc, 20.0, (640,480))#(name, fourcc, fps, size(tuple))
 
 while (cap.isOpened()):
@@ -28,3 +29,4 @@ while (cap.isOpened()):
 cap.release()
 out.release()
 cv2.destroyAllWindows()
+
