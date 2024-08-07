@@ -53,10 +53,13 @@ for i in range(5, 0, -1):
 
 # Now join the left and right halves of images in each level
 apple_orange_pyramid = []
+n= 0
 for apple_lap, orange_lap in zip(lp_apple, lp_orange):
-    cols, rows, ch = apple_lap.shape
+    n+=1
+    cols, rows, ch = apple_lap.shape  #(512, 512, 3)
     laplacian = np.hstack((apple_lap[:, :int(cols/2)], orange_lap[:, int(cols/2):]))
     apple_orange_pyramid.append(laplacian)
+    
 
 # Reconstruct now
 apple_orange_reconstruct = apple_orange_pyramid[0]
